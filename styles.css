@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(225, 60%, 40%);
+  color: hsl(100, 100%, 100%);
+}
+.flex-container {
+  /* all flex container properties with default values*/
+  display: flex;
+  flex-flow: row nowrap; /*flex-direction: and flex-wrap:*/
+  justify-content: flex-start; /*main axis*/
+  align-items: stretch; /*cross axis*/
+  align-content: stretch;
+  /**************************************************/
+  background-color: blue;
+  border-style: solid;
+  border-color: black;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-radius: 5px;
+}
+.flex-item {
+  background-color: 0b7a75;
+  color: #f5f5f5;
+  border-style: groove;
+  border-color: #19535f;
+  border-width: 5px;
+  border-radius: 5px;
+}
+/*very large*/
+@media screen and (max-width: 1199px) /*bootstrap large*/ 
+{
+/*do something*/
+} /*very small*/
+@media screen and (max-width: 991px) /*bootstrap medium*/ 
+{
+  /*do something*/
+} /*small*/
+@media screen and (max-width: 767px) /*bootstrap small*/ {
+/*do something*/
+} /*medium*/
+@media screen and (max-width: 575px) /*bootstrap very small*/ {
+ .flex-container {
+    flex-direction: column;
+  }
+} /*large*/
+@media screen and (min-width: 1200px) /*bootstrap very large*/ 
+{
+  /*do something*/
+} 
