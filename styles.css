@@ -10,9 +10,9 @@ body {
   /* all flex container properties with default values*/
   display: flex;
   flex-flow: row nowrap; /*flex-direction: and flex-wrap:*/
-  justify-content: flex-start; /*main axis*/
+  justify-content: space-around; /*main axis*/
   align-items: stretch; /*cross axis*/
-  align-content: stretch;
+  align-content: space-between; /*align multiple rows*/
   /**************************************************/
   background-color: hsl(350, 60%, 40%);
   border-style: solid;
@@ -21,6 +21,7 @@ body {
   padding: 0;
   border-width: 0;
   border-radius: 5px;
+  height: 200px;
 }
 .flex-item {
   background-color: hsl(115, 60%, 40%);
@@ -30,24 +31,11 @@ body {
   border-width: 5px;
   border-radius: 5px;
 }
-/*very large*/
-@media screen and (max-width: 1199px) /*bootstrap large*/ 
-{
-/*do something*/
-} /*very small*/
-@media screen and (max-width: 991px) /*bootstrap medium*/ 
-{
-  /*do something*/
-} /*small*/
-@media screen and (max-width: 767px) /*bootstrap small*/ {
-/*do something*/
-} /*medium*/
-@media screen and (max-width: 575px) /*bootstrap very small*/ {
- .flex-container {
-    flex-direction: column;
-  }
-} /*large*/
-@media screen and (min-width: 1200px) /*bootstrap very large*/ 
-{
-  /*do something*/
-} 
+
+#flex-item-01 {
+flex: 1 1 1px;/*grow shrink basis*/
+align-self: center;
+}
+#flex-item-02 {
+  align-self: flex-start
+}
