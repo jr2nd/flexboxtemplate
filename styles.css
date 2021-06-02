@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: hsl(165, 60%, 40%);
+  background-color: var(--bodybgcolor);
   color: hsl(100, 100%, 100%);
 }
 .flex-container {
